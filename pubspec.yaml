@@ -1,0 +1,75 @@
+name: money_manga
+description: A new Flutter application.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pedantic:
+  cupertino_icons: ^1.0.2
+  get: ^4.1.3
+  webview_flutter: ^2.0.2
+  sleek_circular_slider: ^2.0.0
+  url_launcher: ^6.0.2
+  oauth2: ^2.0.0
+  logger:
+  json_annotation:
+  # Firebase
+  firebase_core: ^1.0.2
+  firebase_core_web: ^1.0.2
+  # Mobile and MacOS only
+  firebase_crashlytics: ^1.0.0
+  # Not support null-safety. Comment-out
+  # https://github.com/FirebaseExtended/flutterfire/issues/5311
+  # firebase_analytics: ^7.1.1
+
+
+  font_awesome_flutter: ^9.0.0
+  # check internet connection availability
+  #data_connection_checker: ^0.3.4
+  #network and logging
+  http: ^0.13.1
+  retrofit: ^2.0.0-beta1
+  dio: ^4.0.0-prev3
+  encrypt: ^5.0.0
+
+  provider: ^5.0.0   #statemanagement
+  get_it: ^6.0.0  #Dependency Injection
+  cached_network_image: ^3.0.0-nullsafety  # Image network Cache
+  shared_preferences: ^2.0.0-nullsafety
+
+  floor: ^1.0.1 #local database
+  floor_annotation: ^1.0.0
+  flutter_styled_toast: ^2.0.0 #Toast messages
+  flutter_bloc: ^7.0.0
+  rxdart: ^0.26.0
+  equatable: ^2.0.0
+  percent_indicator: ^3.3.0-nullsafety.1
+  #oauth2: ^2.0.0
+  #flutter_inappwebview: ^5.2.1+1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner:
+  json_serializable:
+  floor_generator: ^1.0.1
+  analyzer: ^1.1.0
+  retrofit_generator: ^2.0.0-beta2
+  #json_serializable: ^4.1.0
+
+flutter:
+  uses-material-design: true
+
+  module:
+    androidX: true
+    #androidPackage: com.invia.my_budget
+    #iosBundleIdentifier: com.invia.my_budget
+
