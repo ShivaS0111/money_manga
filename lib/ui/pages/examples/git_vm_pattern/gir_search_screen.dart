@@ -2,15 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:money_manga/config/_colors.dart';
 import 'package:money_manga/core/database/table/_repository.dart';
-import 'package:money_manga/core/viewmodels/git_search_vm.dart';
 import 'package:provider/provider.dart';
 
-class GitSearchPage extends StatefulWidget {
+import 'git_search_vm.dart';
+
+class GitSearchVMPage extends StatefulWidget {
   @override
   _GitSearchPageState createState() => _GitSearchPageState();
 }
 
-class _GitSearchPageState extends State<GitSearchPage> {
+class _GitSearchPageState extends State<GitSearchVMPage> {
   GitSearchViewModel? _viewModel;
 
   @override

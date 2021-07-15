@@ -1,7 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
-import 'package:money_manga/ui/pages/dashboard/dashboard_page.dart';
 import 'package:money_manga/ui/widgets/common/shqs_buttons.dart';
 import 'package:money_manga/ui/widgets/common/shqs_textfield.dart';
 
@@ -48,11 +46,6 @@ class _ModelNumberInputState extends State<ModelNumberInputPage> {
                   });
 
                   if (_isValidSerialNumber && _isValidSerialNumber) {
-                    // TODO Move to the Dashboard Screen
-                    Get.toNamed(DashboardPage.name, arguments: {
-                      'model_number': _modelNumberController.text,
-                      'serial_number': _serialNumberController.text
-                    });
                   }
                 }),
           )

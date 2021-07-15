@@ -1,13 +1,10 @@
-import 'dart:convert';
-import 'dart:io';
 
 import 'package:dio/dio.dart' hide Headers;
-import 'package:http_parser/http_parser.dart' show MediaType;
 import 'package:money_manga/config/_api.dart';
 import 'package:money_manga/core/network/response/git_search_response.dart';
 import 'package:money_manga/core/network/response/product_list_response.dart';
-import 'package:retrofit/dio.dart';
 import 'package:retrofit/http.dart';
+
 part 'retrofit_client.g.dart';
 
 @RestApi(baseUrl: 'https://5d42a6e2bc64f90014a56ca0.mockapi.io/api/v1/')
@@ -16,13 +13,10 @@ abstract class RestClient {
 
   @POST(Api.getOfflineProducts)
   @FormUrlEncoded()
-  Future<ProductListResponse> getOfflineProducts(
-      @Field('data') String data);
+  Future<ProductListResponse> getOfflineProducts(@Field('data') String data);
 
   @GET(Api.gitSearch)
-  Future<GitSearchResponse> gitSearch(
-      @Query('language') String language
-      );
+  Future<GitSearchResponse> gitSearch(@Path() String language);
 
 /*@POST("http://httpbin.org/post")
   Future<void> createNewTaskFromFile(@Part() File file);

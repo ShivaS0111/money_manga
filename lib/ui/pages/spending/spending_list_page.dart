@@ -3,18 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_view.dart';
 import 'package:money_manga/config/_colors.dart';
+import 'package:money_manga/config/_routes.dart';
 import 'package:money_manga/ui/pages/spending/spending_list_controller.dart';
-import 'package:money_manga/ui/widgets/filter/filter_widget.dart';
 
 class SpendingListPage extends GetView<SpendingListController> {
-  var controller1 = Get.put(SpendingListController());
+
+  static final name = AppRoutes.spendingList;
+  var _controller= SpendingListController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appbar(),
-      body: _body(), // just call `controller.something`
-    );
+      body: GetBuilder(
+        init: _controller,
+        builder: (controller) => _body(),
+      ));
   }
 
   PreferredSizeWidget _appbar() {

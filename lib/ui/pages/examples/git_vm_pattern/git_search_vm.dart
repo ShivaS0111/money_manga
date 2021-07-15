@@ -10,10 +10,11 @@ class GitSearchViewModel extends ChangeNotifier {
   Future<void> getList() async {
     var resp = await _gitDataSource.search("flutter");
     if (resp.data != null && resp.data!.data != null) {
-      list = [];
+      /*list = [];
       resp.data!.data!.forEach((element) {
         list.add(element);
-      });
+      });*/
+      list = resp.data!.data ?? [];
       notifyListeners();
     }
   }

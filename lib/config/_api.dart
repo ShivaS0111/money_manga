@@ -11,6 +11,6 @@ class Api {
   static const String newsById = "$ENDPOINT/news-by-id";
   static const String breakingNews = "$ENDPOINT/breaking-news";
   static const String getOfflineProducts = "$BASE_URL1/getOfflineProducts";
-  static const String gitSearch = "$GIT_ENDPOINT/legacy/repos/search/Go";
+  static const String gitSearch = "$GIT_ENDPOINT/legacy/repos/search/{language}";
 
 }

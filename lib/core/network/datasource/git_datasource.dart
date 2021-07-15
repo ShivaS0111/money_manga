@@ -5,10 +5,10 @@ import '../_result.dart';
 import 'base_datasource.dart';
 
 class GitDataSource extends BaseDataSource {
-  Future<Result<GitSearchResponse?>> search(String searchTerm) async =>
+  Future<Result<GitSearchResponse>> search(String searchTerm) async =>
       await getResult(retroClient.gitSearch(searchTerm));
 
-  /*Future<Result<GitSearchResponse>> search1(String searchTerm) async =>
+/*Future<Result<GitSearchResponse>> search1(String searchTerm) async =>
       await request(
           type: NetworkRequestType.POST,
           url: Api.gitSearch,
